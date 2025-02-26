@@ -1,0 +1,90 @@
+body { 
+  background: rgb(60, 241, 241);
+  color: #020202;
+
+  .header {
+      text-align: center;
+      font-family: "Montserrat", serif;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: normal;
+      
+  } 
+  #movie-review {
+    font-weight: 600;
+    font-style: italic;
+
+    max-width: 1100px;
+    text-indent: 10px;
+    word-break: normal;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  #quotes {
+    font-weight: 600;
+    font-style: italic;
+
+    max-width: 1100px;
+    text-indent: 10px;
+    word-break: normal;
+    margin-top: 5px;
+    margin-left: 0px;
+  }
+
+  #fun-facts {
+      font-weight: 600;
+      font-style: italic;
+
+      max-width: 1400px;
+      text-indent: 10px;
+      word-break: normal;
+      margin-top: 5px;
+      margin-left: 0px;
+  }
+  footer {
+    font-weight: 600;
+    font-style: italic;
+
+    max-width: 1100px;
+    text-indent: 10px;
+    word-break: normal;
+    margin-top: 5px;
+    margin-left: 0px;
+  }
+  #football {
+    font-weight: 600;
+    font-style: italic;
+
+    max-width: 1100px;
+    text-indent: 10px;
+    word-break: normal;
+    margin-top: 5px;
+    margin-left: 0px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  table, th, td {
+    border: 1px solid #000000;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  .header-image {
+      max-width: 10%;
+      height: auto;
+  }
+  .joker-image {
+    max-width: 60%;
+    height: auto;
+  }
+  .folham-image {
+    max-width: 10%;
+    height: auto;
+  }
+}
