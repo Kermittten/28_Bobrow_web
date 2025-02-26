@@ -1,0 +1,221 @@
+:root {
+  --primary-color: #ff6600;
+  --secondary-color: #ff9966;
+  --background-color: #ffcc00;
+  --text-color: #333;
+  --white: #fff;
+  --black: #000;
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Comic Sans MS', cursive;
+}
+
+body {
+  font-family: var(--font-primary);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-family: var(--font-secondary);
+  animation: bounce 2s infinite;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+main {
+  padding: 20px;
+}
+
+aside {
+  padding: 20px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+.reasons, .slogans, .reviews, .ads {
+  margin-bottom: 40px;
+}
+
+.reasons h2, .slogans h2, .reviews h2, .ads h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-align: center;
+  font-family: var(--font-secondary);
+}
+
+.reasons ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+  font-size: 1.1rem;
+}
+
+.reasons ol li {
+  margin-bottom: 10px;
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.reasons ol li:hover {
+  transform: scale(1.05);
+}
+
+.slogan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.slogan-grid p {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.slogan-grid p:hover {
+  transform: translateY(-5px);
+}
+
+.review-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.review {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.review:hover {
+  transform: translateY(-5px);
+}
+
+.review p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.review span {
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+  color: var(--primary-color);
+}
+
+.ad-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.ad-grid figure {
+  margin: 0;
+  text-align: center;
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.ad-grid figure:hover {
+  transform: scale(1.05);
+}
+
+.ad-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.ad-grid figcaption {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--text-color);
+  font-style: italic;
+}
+
+.ad-grid img:hover {
+  transform: scale(1.05);
+ 
+}
+
+
+@media (max-width: 768px) {
+  .slogan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review {
+    flex: 1 1 100%;
+  }
+
+  .ad-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .reasons h2, .slogans h2, .reviews h2, .ads h2 {
+    font-size: 1.5rem;
+  }
+
+  .reasons ol li, .slogan-grid p, .review p {
+    font-size: 1rem;
+  }
+}
