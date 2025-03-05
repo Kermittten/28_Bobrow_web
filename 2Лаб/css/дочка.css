@@ -16,6 +16,9 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -48,10 +51,25 @@ header p {
 }
 
 main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
   padding: 20px;
 }
 
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.content {
+  flex: 3;
+  padding: 0 20px;
+}
+
 aside {
+  width: 250px; /* Фиксированная ширина для боковых колонок */
   padding: 20px;
   background-color: var(--secondary-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -65,11 +83,11 @@ footer {
   font-size: 0.9rem;
 }
 
-.reasons, .slogans, .reviews, .ads {
+.reasons, .slogans, .reviews {
   margin-bottom: 40px;
 }
 
-.reasons h2, .slogans h2, .reviews h2, .ads h2 {
+.reasons h2, .slogans h2, .reviews h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: var(--primary-color);
@@ -148,11 +166,9 @@ footer {
 }
 
 .ad-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-  width: 100%;
-  height: auto;
 }
 
 .ad-grid figure {
@@ -182,13 +198,11 @@ footer {
   font-style: italic;
 }
 
-.ad-grid img:hover {
-  transform: scale(1.05);
- 
-}
-
-
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
   .slogan-grid {
     grid-template-columns: 1fr;
   }
@@ -198,7 +212,16 @@ footer {
   }
 
   .ad-grid {
-    grid-template-columns: 1fr;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .ad-grid figure {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  aside {
+    width: 100%; /* На мобильных устройствах боковые колонки занимают всю ширину */
   }
 }
 
@@ -211,11 +234,15 @@ footer {
     font-size: 1rem;
   }
 
-  .reasons h2, .slogans h2, .reviews h2, .ads h2 {
+  .reasons h2, .slogans h2, .reviews h2 {
     font-size: 1.5rem;
   }
 
   .reasons ol li, .slogan-grid p, .review p {
     font-size: 1rem;
+  }
+
+  .ad-grid figure {
+    flex: 1 1 100%;
   }
 }
