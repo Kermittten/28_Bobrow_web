@@ -1,200 +1,199 @@
-/* внучка.css */
 :root {
-    --primary-color: #ff6600;
-    --secondary-color: #ff9966;
-    --background-color: #ffcc00;
-    --text-color: #333;
-    --white: #fff;
-    --black: #000;
-    --font-primary: 'Comic Neue', cursive;
-  }
-  
-  body {
-    font-family: var(--font-primary);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  body.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
-  }
-  
-  body.dark-theme header,
-  body.dark-theme footer {
-    background-color: #1f1f1f;
-    color: #ffffff;
-  }
-  
-  body.dark-theme .ads,
-  body.dark-theme .content {
-    background-color: #1f1f1f;
-    color: #ffffff;
-  }
-  
-  body.dark-theme .review {
-    background-color: #2c2c2c;
-    color: #ffffff;
-  }
-  
-  body.dark-theme .add-review {
-    background-color: #2c2c2c;
-    color: #ffffff;
-  }
-  
-  body.dark-theme .add-review input,
-  body.dark-theme .add-review textarea {
-    background-color: #1f1f1f;
-    color: #ffffff;
-    border: 1px solid #444;
-  }
-  
-  body.dark-theme .add-review button {
-    background-color: var(--primary-color);
-    color: var(--white);
-  }
-  
-  header {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--primary-color);
-    color: var(--white);
-  }
-  
-  main {
-    flex: 1;
-    padding: 0 150px;
-  }
-  
+  --primary-color: #ff6600;
+  --secondary-color: #ff9966;
+  --background-color: #ffcc00;
+  --text-color: #333;
+  --white: #fff;
+  --black: #000;
+  --font-primary: 'Comic Neue', cursive;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-theme header,
+body.dark-theme footer {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+body.dark-theme .ads,
+body.dark-theme .content {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+body.dark-theme .review {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+body.dark-theme .add-review {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+body.dark-theme .add-review input,
+body.dark-theme .add-review textarea {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+body.dark-theme .add-review button {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+main {
+  flex: 1;
+  padding: 0 150px;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.content {
+  flex: 3;
+  padding: 0 150px;
+}
+
+.invention-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.invention-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+  width: 350px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.reasons ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.reasons ol li {
+  margin-bottom: 10px;
+}
+
+.slogan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.review-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.review {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.add-review {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-review form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-review input,
+.add-review textarea,
+.add-review button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.add-review button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-review button:hover {
+  background-color: #e65c00;
+}
+
+.ad-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#theme-toggle:hover {
+  background-color: #e65c00;
+}
+
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    gap: 10px;
+    flex-direction: column;
   }
-  
-  .content {
-    flex: 3;
-    padding: 0 150px;
-  }
-  
-  .invention-image {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .invention-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
+
   aside {
-    width: 350px;
+    width: 100%;
   }
-  
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: var(--black);
-    color: var(--white);
-  }
-  
-  .reasons ol {
-    list-style-type: decimal;
-    padding-left: 20px;
-  }
-  
-  .reasons ol li {
-    margin-bottom: 10px;
-  }
-  
-  .slogan-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-  }
-  
-  .review-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .review {
-    flex: 1 1 calc(33.333% - 20px);
-    background-color: var(--white);
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .add-review {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .add-review form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .add-review input,
-  .add-review textarea,
-  .add-review button {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-  }
-  
-  .add-review button {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .add-review button:hover {
-    background-color: #e65c00;
-  }
-  
-  .ad-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  #theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-  
-  #theme-toggle:hover {
-    background-color: #e65c00;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    aside {
-      width: 100%;
-    }
-  }
+}
