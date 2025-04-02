@@ -3,48 +3,48 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-}
-
-header {
+  }
+  
+  header {
     background-color: #333;
     color: white;
     padding: 10px;
     text-align: center;
-}
-
-nav {
+  }
+  
+  nav {
     margin-top: 10px;
-}
-
-nav ul {
+  }
+  
+  nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
-}
-
-nav li {
+  }
+  
+  nav li {
     margin: 0 10px;
-}
-
-nav button {
+  }
+  
+  nav button {
     background-color: #555;
     color: white;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-nav button:hover {
+  }
+  
+  nav button:hover {
     background-color: #777;
-}
-
-#tier-list-container {
+  }
+  
+  #tier-list-container {
     padding: 20px;
-}
-
-.tier {
+  }
+  
+  .tier {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -52,23 +52,25 @@ nav button:hover {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.tier-label {
+  }
+  
+  .tier-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .tier-label {
     background-color: #555;
     color: white;
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 10px;
     width: 30px;
     text-align: center;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.tier-content {
+  }
+  
+  .tier-content {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -76,19 +78,19 @@ nav button:hover {
     background-color: #f9f9f9;
     padding: 10px;
     border-radius: 5px;
-}
-
-.tier-content img {
+  }
+  
+  .tier-content img {
     width: 50px;
     height: 50px;
     cursor: grab;
-}
-
-#unassigned-images-container {
+  }
+  
+  #unassigned-images-container {
     padding: 20px;
-}
-
-.unassigned-images {
+  }
+  
+  .unassigned-images {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -96,23 +98,23 @@ nav button:hover {
     padding: 10px;
     border-radius: 5px;
     min-height: 60px;
-}
-
-.unassigned-images img {
+  }
+  
+  .unassigned-images img {
     width: 50px;
     height: 50px;
     cursor: grab;
-}
-
-#api-response-container {
+  }
+  
+  #api-response-container {
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-}
-
-button {
+  }
+  
+  button {
     background-color: #555;
     color: white;
     border: none;
@@ -120,13 +122,13 @@ button {
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #777;
-}
-
-.delete-tier-button {
+  }
+  
+  .delete-tier-button {
     background-color: #ff4d4d;
     color: white;
     border: none;
@@ -134,12 +136,13 @@ button:hover {
     margin-left: 10px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.delete-tier-button:hover {
+  }
+  
+  .delete-tier-button:hover {
     background-color: #ff1a1a;
-}
-
-.hidden {
-    display: none;
-}
+  }
+  
+  #add-tier-button {
+    width: 100%;
+    margin-top: 10px;
+  }
