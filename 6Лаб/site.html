@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tier List</title>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link" data-section="tier-list">Tier List</a></li>
+                <li><a href="#" class="nav-link" data-section="cat-api">Random Cat</a></li>
+                <li><a href="#" class="nav-link" data-section="joke-api">Random Joke</a></li>
+                <li><a href="#" class="nav-link" data-section="jsonplaceholder">JSONPlaceholder</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <button id="edit-mode-toggle" class="hidden">Режим редактирования</button>
+            <button id="add-tier-button" class="hidden">Добавить тир</button>
+        </div>
+    </header>
+    
+    <main>
+        <section id="tier-list-section" class="content-section active">
+            <div id="tier-list-container"></div>
+            <div id="unassigned-images-container">
+                <h3>Не распределённые чебу-штуки</h3>
+                <div class="unassigned-images"></div>
+            </div>
+        </section>
+        
+        <section id="cat-api-section" class="content-section">
+            <div class="api-container">
+                <h2>Random Cat</h2>
+                <button id="get-cat-btn">Get Random Cat</button>
+                <div id="cat-result" class="api-result"></div>
+            </div>
+        </section>
+        
+        <section id="joke-api-section" class="content-section">
+            <div class="api-container">
+                <h2>Random Joke</h2>
+                <button id="get-joke-btn">Get Random Joke</button>
+                <div id="joke-result" class="api-result"></div>
+            </div>
+        </section>
+        
+        <section id="jsonplaceholder-section" class="content-section">
+            <div class="api-container">
+                <h2>JSONPlaceholder</h2>
+                <div class="api-controls">
+                    <button id="json-get-btn">GET Post</button>
+                    <button id="json-post-btn">POST New</button>
+                    <button id="json-put-btn">PUT Update</button>
+                    <button id="json-patch-btn">PATCH Update</button>
+                    <button id="json-delete-btn">DELETE Post</button>
+                </div>
+                <div id="json-result" class="api-result"></div>
+            </div>
+        </section>
+        
+        <div id="loading-overlay" class="hidden">
+            <div class="spinner"></div>
+        </div>
+    </main>
+
+    <script src="js/index.js"></script>
+    <script src="js/api/cats.js"></script>
+    <script src="js/api/jokes.js"></script>
+    <script src="js/api/jsonplaceholder.js"></script>
+</body>
+</html>

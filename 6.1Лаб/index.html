@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tier List</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/tier-list.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Tier List</a></li>
+                <li><a href="cat-api/index.html" class="nav-link">Random Cat</a></li>
+                <li><a href="joke-api/index.html" class="nav-link">Random Joke</a></li>
+                <li><a href="jsonplaceholder/index.html" class="nav-link">JSONPlaceholder</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <button id="edit-mode-toggle">Режим редактирования</button>
+            <button id="add-tier-button">Добавить тир</button>
+        </div>
+    </header>
+    
+    <main>
+        <div id="tier-list-container"></div>
+        <div id="unassigned-images-container">
+            <h3>Не распределённые чебу-штуки</h3>
+            <div class="unassigned-images"></div>
+        </div>
+        
+        <div id="loading-overlay" class="hidden">
+            <div class="spinner"></div>
+        </div>
+    </main>
+
+    <script src="js/common.js"></script>
+    <script src="js/tier-list.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+.api-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .api-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .api-result {
+    min-height: 100px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    padding: 10px;
+  }
+
+  .joke-container {
+    padding: 15px;
+  }
+  
+  .joke-setup {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .joke-punchline {
+    font-style: italic;
+    color: #2c3e50;
+  }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONPlaceholder</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Tier List</a></li>
+                <li><a href="../cat-api/index.html" class="nav-link">Random Cat</a></li>
+                <li><a href="../joke-api/index.html" class="nav-link">Random Joke</a></li>
+                <li><a href="index.html" class="nav-link active">JSONPlaceholder</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="api-container">
+            <h2>JSONPlaceholder</h2>
+            <div class="api-controls">
+                <button id="json-get-btn">GET Post</button>
+                <button id="json-post-btn">POST New</button>
+                <button id="json-put-btn">PUT Update</button>
+                <button id="json-patch-btn">PATCH Update</button>
+                <button id="json-delete-btn">DELETE Post</button>
+            </div>
+            <div id="json-result" class="api-result"></div>
+        </div>
+        
+        <div id="loading-overlay" class="hidden">
+            <div class="spinner"></div>
+        </div>
+    </main>
+
+    <script src="../js/common.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
