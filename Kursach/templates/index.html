@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="search">
+        <input type="text" placeholder="Поиск по названию или ингредиентам...">
+        <button>Найти</button>
+    </div>
+    <div class="recipes">
+        {% for recipe in recipes %}
+            <div class="recipe-card">
+                <img src="{{ url_for('static', filename='uploads/' + recipe.image) if recipe.image else 'https://via.placeholder.com/300' }}" alt="{{ recipe.title }}">
+                <h3>{{ recipe.title }}</h3>
+                <p>{{ recipe.ingredients[:100] }}...</p>
+                <a href="{{ url_for('recipe_detail', id=recipe.id) }}">Подробнее</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

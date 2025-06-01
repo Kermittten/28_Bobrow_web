@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="recipe-detail">
+        <img src="{{ url_for('static', filename='uploads/' + recipe.image) if recipe.image else 'https://via.placeholder.com/500' }}" alt="{{ recipe.title }}">
+        <h2>{{ recipe.title }}</h2>
+        <div class="rating">
+            <span>Оценка: {{ recipe.rating }}/5</span>
+            <form method="POST" action="{{ url_for('rate_recipe', id=recipe.id) }}">
+                <select name="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button type="submit">Оценить</button>
+            </form>
+        </div>
+        <h3>Ингредиенты:</h3>
+        <p>{{ recipe.ingredients }}</p>
+        <h3>Инструкция:</h3>
+        <p>{{ recipe.instructions }}</p>
+    </div>
+{% endblock %}
